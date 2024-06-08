@@ -1,7 +1,6 @@
 package dto
 
 import (
-	"contacts/utils/date"
 	"github.com/golang-jwt/jwt/v4"
 )
 
@@ -27,14 +26,10 @@ type LoginResponse struct {
 }
 
 type UserContact struct {
-	Id          int64            `json:"id" gorm:"primaryKey"`
-	UserId      int64            `json:"user_id"`
-	Email       string           `json:"email"`
-	Name        string           `json:"name"`
-	PrefixPhone string           `json:"prefix_phone"`
-	Phone       string           `json:"phone"`
-	CreatedAt   date.ContactDate `json:"created_at"`
-	UpdatedAt   date.ContactDate `json:"updated_at"`
+	Email       string `json:"email"`
+	Name        string `json:"name"`
+	PrefixPhone string `json:"prefix_phone"`
+	Phone       string `json:"phone"`
 }
 
 type Claims struct {
